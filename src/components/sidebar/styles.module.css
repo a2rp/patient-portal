@@ -1,0 +1,39 @@
+.sidebar { position: fixed; z-index: 40; inset: 0 auto 0 0; width: 258px; display: flex; flex-direction: column; padding: 24px 17px 18px; border-right: 1px solid #deebea; background: #fbfdfc; }
+.brand { display: inline-flex; align-items: center; gap: 10px; width: fit-content; color: var(--brand); font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 600; line-height: 1; }
+.mark { width: 39px; height: 39px; display: grid; place-items: center; border-radius: 13px; background: var(--brand); color: #e1f3f0; }
+.mark svg { width: 20px; height: 20px; fill: rgb(225 243 240 / 22%); }
+.brand small { display: block; margin-top: 5px; color: #7d9698; font-family: var(--font-sans); font-size: 13px; font-weight: 800; letter-spacing: .11em; }
+.patient { display: flex; align-items: center; gap: 10px; margin-top: 36px; padding: 13px 11px; border: 1px solid #e2edeb; border-radius: 14px; background: #f3f8f6; }
+.avatar { width: 38px; height: 38px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 13px; background: #d3e8e4; color: #285c60; font-size: 13px; font-weight: 800; }
+.identity { min-width: 0; display: grid; gap: 2px; }
+.identity strong { color: var(--ink); font-size: 14px; }
+.identity small { color: var(--muted); font-size: 13px; }
+.online { width: 8px; height: 8px; flex: 0 0 auto; margin-left: auto; border-radius: 50%; background: #73a783; box-shadow: 0 0 0 3px #e1eee3; }
+.sectionLabel { margin: 28px 0 10px 9px; color: #82989a; font-size: 13px; font-weight: 800; letter-spacing: .1em; }
+.navigation { display: grid; gap: 5px; }
+.navLink { min-height: 47px; display: flex; align-items: center; gap: 11px; padding: 0 12px; border: 1px solid transparent; border-radius: 11px; background: transparent; color: #60777c; font-size: 14px; font-weight: 650; transition: background .18s ease, border-color .18s ease, color .18s ease; }
+.navLink > svg { width: 18px; height: 18px; }
+.navLink:hover { background: #f2f7f5; color: var(--brand); }
+.navLink.active { border-color: #d8e8e5; background: #e8f3f0; color: #18575c; }
+.count { min-width: 24px; height: 23px; display: grid; place-items: center; margin-left: auto; border-radius: 8px; background: white; color: var(--brand); font-size: 13px; font-weight: 800; }
+.wellness { margin-top: auto; padding: 15px; border: 1px solid #dcebe7; border-radius: 15px; background: linear-gradient(140deg, #e8f5f1, #f4f8f2); }
+.wellness > div { display: flex; align-items: center; gap: 7px; color: #59817c; font-size: 13px; font-weight: 800; letter-spacing: .08em; }
+.wellness > div svg { width: 16px; height: 16px; }
+.wellness > strong { display: block; margin-top: 12px; color: var(--brand); font-family: Georgia, serif; font-size: 19px; font-weight: 500; }
+.wellness > p { margin-top: 4px; color: #617c7c; font-size: 13px; line-height: 1.55; }
+.wellness > a { display: flex; justify-content: space-between; margin-top: 11px; color: var(--brand); font-size: 13px; font-weight: 800; }
+.wellness > a span { font-size: 16px; }
+.help { width: 100%; display: flex; align-items: center; gap: 10px; margin-top: 14px; padding: 10px 7px; border: 0; border-radius: 12px; background: transparent; text-align: left; transition: background .18s ease; }
+.help:hover { background: #f0f6f4; }
+.help > span:first-child { width: 37px; height: 37px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--accent); }
+.help > span:first-child svg { width: 18px; height: 18px; }
+.help > span:nth-child(2) { display: grid; gap: 1px; }
+.help strong { color: var(--ink); font-size: 14px; }
+.help small { color: var(--muted); font-size: 13px; }
+.helpArrow { margin-left: auto; color: #82989a; font-size: 17px; }
+.sideFoot { display: grid; gap: 6px; margin-top: 12px; padding: 14px 9px 0; border-top: 1px solid #e4eeec; color: #829397; font-size: 13px; }
+.secure { display: flex; align-items: center; gap: 6px; color: #61817d; font-weight: 600; }
+.secure svg { width: 14px; height: 14px; }
+.scrim { display: none; }
+@media (max-width: 760px) { .sidebar { z-index: 50; width: 280px; transform: translateX(-104%); transition: transform .22s ease; box-shadow: none; } .sidebar.open { transform: translateX(0); box-shadow: 15px 0 50px rgb(17 55 58 / 16%); } .scrim { position: fixed; z-index: 45; inset: 0; display: block; border: 0; background: rgb(20 42 44 / 35%); } }
+@media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }
