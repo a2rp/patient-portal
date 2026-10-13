@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { FiArrowDown, FiArrowUp, FiCalendar, FiChevronRight, FiClock, FiEdit2, FiMapPin, FiPlus, FiSearch, FiTrash2, FiVideo } from "react-icons/fi";
+import { FiArrowDown, FiArrowUp, FiCalendar, FiChevronRight, FiClock, FiEdit2, FiMapPin, FiPlus, FiSearch, FiShield, FiTrash2, FiVideo } from "react-icons/fi";
 import Dialog from "../../components/dialog";
 import ConfirmDialog from "../../components/confirmDialog";
 import styles from "./styles.module.css";
