@@ -32,7 +32,7 @@ const Sidebar = ({ open, onClose, appointmentCount, onSupportClick }) => (
 
       <div className={styles.wellness}><div><FiActivity aria-hidden="true" /><span>WELLNESS CHECK</span></div><strong>You're on track.</strong><p>Your next visit is coming up soon. Keep your care moving at your own pace.</p><Link to="/appointments" onClick={onClose}>See your visit <span aria-hidden="true">→</span></Link></div>
 
-      <button className={styles.help} type="button" onClick={onSupportClick}><span><FiHelpCircle aria-hidden="true" /></span><span><strong>Need a hand?</strong><small>Visit portal help</small></span><span className={styles.helpArrow}>↗</span></button>
+      <button className={styles.help} type="button" onClick={() => { onClose(); onSupportClick(); }}><span><FiHelpCircle aria-hidden="true" /></span><span><strong>Need a hand?</strong><small>Visit portal help</small></span><span className={styles.helpArrow}>↗</span></button>
       <div className={styles.sideFoot}><span className={styles.secure}><FiHeart aria-hidden="true" /> Your health, in your hands</span><span>Demo workspace</span></div>
     </aside>
   </>
