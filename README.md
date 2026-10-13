@@ -2,6 +2,10 @@
 
 A patient-facing healthcare portal concept for reviewing appointments, care plan reminders, and health records. This is a frontend-only demonstration using fictional patient and clinical data. It is not connected to a backend or a real health system.
 
+## Live demo
+
+[Open the Wellnest Patient Portal](https://a2rp.github.io/patient-portal/)
+
 ## Screenshots
 
 ### Home
