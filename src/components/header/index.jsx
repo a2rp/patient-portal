@@ -1,16 +1,16 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { FiBell, FiMenu, FiPlus } from "react-icons/fi";
+import { FiBell, FiMenu, FiPlus, FiX } from "react-icons/fi";
 import styles from "./styles.module.css";
 
 const titles = { "/home": "Home", "/appointments": "Appointments", "/health-records": "Health records" };
 
-const Header = ({ onMenuToggle, onOpenNotifications, unreadCount }) => {
+const Header = ({ onMenuToggle, onOpenNotifications, unreadCount, isMenuOpen }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   return (
     <header className={styles.header}>
       <div className={styles.titleGroup}>
-        <button className={styles.menu} type="button" onClick={onMenuToggle} aria-label="Open navigation"><FiMenu aria-hidden="true" /></button>
+        <button className={styles.menu} type="button" onClick={onMenuToggle} aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}>{isMenuOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}</button>
         <div><p>WELLNEST CARE</p><h1>{titles[pathname] || "Patient portal"}</h1></div>
       </div>
       <div className={styles.actions}>
